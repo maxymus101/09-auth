@@ -26,8 +26,8 @@ export default function NoteList({ notes }: NoteListProps) {
   });
 
   // Обробник видалення нотатки, який викликає мутацію
-  const handleDeleteNote = (id: number) => {
-    deleteNoteMutation.mutate(id); // Запускаємо мутацію видалення
+  const handleDeleteNote = (id: string) => {
+    deleteNoteMutation.mutate(Number(id)); // Запускаємо мутацію видалення
   };
 
   if (notes.length === 0) {

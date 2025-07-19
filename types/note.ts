@@ -1,5 +1,5 @@
 export interface Note {
-  id: number;
+  id: string;
   title: string; // Заголовок нотатки
   content: string; // Текст нотатки
   createdAt: string; // Дата створення
