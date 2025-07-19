@@ -11,14 +11,14 @@ import { useDebounce } from "use-debounce";
 
 import css from "./NotesPage.module.css";
 
-import { fetchNotes, PaginatedNotesResponse } from "../../../../lib/api";
 import ErrorMessage from "../../../../components/ErrorMessage/ErrorMessage";
-import { Note } from "../../../../types/note";
+import { Note, PaginatedNotesResponse } from "../../../../types/note";
 import Pagination from "../../../../components/Pagination/Pagination";
 import NoteList from "../../../../components/NoteList/NoteList";
 import SearchBox from "../../../../components/SearchBox/SearchBox";
 import Loading from "../../../loading";
 import Link from "next/link";
+import { fetchNotes } from "../../../../lib/clientApi";
 
 interface NotesClientProps {
   initialNotes: PaginatedNotesResponse;

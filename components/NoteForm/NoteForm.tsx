@@ -4,11 +4,16 @@ import css from "./NoteForm.module.css";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import * as Yup from "yup";
-import { type NoteTag, type Note, NewNote } from "../../types/note";
-import { type NewNoteContent, createNote } from "../../lib/api";
+import {
+  type NoteTag,
+  type Note,
+  NewNote,
+  NewNoteContent,
+} from "../../types/note";
 import { useRouter } from "next/navigation";
 import { useId, useState } from "react";
 import { useNoteDraftStore } from "../../lib/store/noteStore";
+import { createNote } from "../../lib/clientApi";
 
 // Схема валідації за допомогою Yup
 const validationSchema = Yup.object({
