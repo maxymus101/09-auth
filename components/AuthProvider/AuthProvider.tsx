@@ -1,6 +1,6 @@
 "use client";
 
-import { checkSession, fetchUser } from "../../lib/clientApi";
+import { checkSession, fetchUser } from "../../lib/api/clientApi";
 import { useAuth } from "../../lib/store/authStore";
 import React, { useEffect } from "react";
 import toast from "react-hot-toast";

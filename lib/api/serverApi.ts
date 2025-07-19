@@ -1,8 +1,8 @@
 import { cookies } from "next/headers";
 import { nextServer } from "./api";
-import { Note, PaginatedNotesResponse } from "../types/note";
-import { CheckSessionResp } from "../types/session";
-import { UserRes } from "../types/user";
+import { Note, PaginatedNotesResponse } from "../../types/note";
+import { CheckSessionResp } from "../../types/session";
+import { UserRes } from "../../types/user";
 
 export async function fetchNotesServer(
   search: string,

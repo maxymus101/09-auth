@@ -3,7 +3,7 @@
 import css from "./NotePreview.module.css";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../app/loading";
-import { fetchNoteById } from "../../lib/clientApi";
+import { fetchNoteById } from "../../lib/api/clientApi";
 
 type NotePreviewProps = {
   id: number;

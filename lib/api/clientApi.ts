@@ -3,9 +3,9 @@ import {
   NewNoteContent,
   Note,
   PaginatedNotesResponse,
-} from "../types/note";
-import { CheckSessionResp } from "../types/session";
-import { NewUser, UpdateUserProps, User, UserRes } from "../types/user";
+} from "../../types/note";
+import { CheckSessionResp } from "../../types/session";
+import { NewUser, UpdateUserProps, User, UserRes } from "../../types/user";
 import { nextServer } from "./api";
 
 export const fetchNotes = async (

@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query"; // Імпо
 import toast from "react-hot-toast"; // Імпортуємо toast для повідомлень
 import Link from "next/link";
 import { DeletedNoteInfo, type Note } from "../../types/note";
-import { deleteNote } from "../../lib/clientApi";
+import { deleteNote } from "../../lib/api/clientApi";
 
 interface NoteListProps {
   notes: Note[];

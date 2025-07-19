@@ -1,7 +1,7 @@
 import css from "./default.module.css";
 import Link from "next/link";
 
-import { tags } from "../../../../lib/constants/constants";
+import { tags } from "../../../../../lib/constants/constants";
 
 export default async function SidebarNotes() {
   return (

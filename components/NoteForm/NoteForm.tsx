@@ -13,7 +13,7 @@ import {
 import { useRouter } from "next/navigation";
 import { useId, useState } from "react";
 import { useNoteDraftStore } from "../../lib/store/noteStore";
-import { createNote } from "../../lib/clientApi";
+import { createNote } from "../../lib/api/clientApi";
 
 // Схема валідації за допомогою Yup
 const validationSchema = Yup.object({
