@@ -14,3 +14,26 @@ export interface NewNote {
 }
 
 export type NoteTag = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
+
+export interface NewNoteContent {
+  title: string;
+  content?: string;
+  tag: NoteTag;
+}
+
+export interface PaginatedNotesResponse {
+  notes: Note[];
+  page: number;
+  totalPages: number;
+  totalResults: number;
+  tag?: string;
+}
+
+export interface DeletedNoteInfo {
+  deletedNoteId: number;
+  title: string;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
+  tag: NoteTag;
+}
