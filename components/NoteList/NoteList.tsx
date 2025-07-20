@@ -13,7 +13,7 @@ export default function NoteList({ notes }: NoteListProps) {
   const queryClient = useQueryClient(); // Ініціалізуємо queryClient
 
   // === useMutation для видалення нотатки ===
-  const deleteNoteMutation = useMutation<DeletedNoteInfo, Error, number>({
+  const deleteNoteMutation = useMutation<DeletedNoteInfo, Error, string>({
     // Типи: успішна відповідь, помилка, ID нотатки
     mutationFn: deleteNote, // Функція з noteService, яка виконує DELETE-запит
     onSuccess: () => {
@@ -27,7 +27,7 @@ export default function NoteList({ notes }: NoteListProps) {
 
   // Обробник видалення нотатки, який викликає мутацію
   const handleDeleteNote = (id: string) => {
-    deleteNoteMutation.mutate(Number(id)); // Запускаємо мутацію видалення
+    deleteNoteMutation.mutate(id); // Запускаємо мутацію видалення
   };
 
   if (notes.length === 0) {

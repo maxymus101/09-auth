@@ -31,12 +31,12 @@ export const createNote = async (content: NewNoteContent): Promise<Note> => {
   return response.data;
 };
 
-export const deleteNote = async (id: number): Promise<DeletedNoteInfo> => {
+export const deleteNote = async (id: string): Promise<DeletedNoteInfo> => {
   const response = await nextServer.delete<DeletedNoteInfo>(`/notes/${id}`);
   return response.data;
 };
 
-export const fetchNoteById = async (id: number): Promise<Note> => {
+export const fetchNoteById = async (id: string): Promise<Note> => {
   const res = await nextServer.get<Note>(`/notes/${id}`);
   return res.data;
 };

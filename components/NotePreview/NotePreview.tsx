@@ -3,17 +3,17 @@
 import css from "./NotePreview.module.css";
 import { useQuery } from "@tanstack/react-query";
 import Loader from "../../app/loading";
-import { fetchNoteById } from "../../lib/api/clientApi";
+import { fetchNoteByIdServer } from "../../lib/api/serverApi";
 
 type NotePreviewProps = {
-  id: number;
+  id: string;
   onClose: () => void;
 };
 
 export default function NotePreview({ id, onClose }: NotePreviewProps) {
   const { data: note, isLoading } = useQuery({
     queryKey: ["note", id],
-    queryFn: () => fetchNoteById(Number(id)),
+    queryFn: () => fetchNoteByIdServer(id),
     refetchOnMount: false,
   });
 
