@@ -4,7 +4,7 @@ import NotePreview from "../../../../components/NotePreview/NotePreview";
 import { useParams, useRouter } from "next/navigation";
 
 export default function PreviewClient() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
   const router = useRouter();
 
@@ -12,7 +12,7 @@ export default function PreviewClient() {
 
   return (
     <Modal onClose={closeModal}>
-      <NotePreview id={Number(id)} onClose={closeModal} />
+      <NotePreview id={id} onClose={closeModal} />
     </Modal>
   );
 }
